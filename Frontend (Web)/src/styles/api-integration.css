@@ -1,8 +1,8 @@
 /* ===================================
-   API Integration Additional Styles
+   API Integration Styles
    =================================== */
 
-/* Loading States */
+/* === Loading States === */
 .loading-container {
   display: flex;
   flex-direction: column;
@@ -16,14 +16,15 @@
 .loading-small {
   text-align: center;
   padding: 2rem;
-  color: #6b7280;
+  color: #6b6b65;
 }
 
+/* Spinners */
 .spinner-large {
   width: 50px;
   height: 50px;
-  border: 4px solid #e5e7eb;
-  border-top-color: #3b82f6;
+  border: 4px solid #eaeae5;
+  border-top-color: #d4a855;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -31,8 +32,8 @@
 .spinner {
   width: 20px;
   height: 20px;
-  border: 2px solid #e5e7eb;
-  border-top-color: #3b82f6;
+  border: 2px solid #eaeae5;
+  border-top-color: #d4a855;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   display: inline-block;
@@ -44,7 +45,7 @@
   to { transform: rotate(360deg); }
 }
 
-/* Error States */
+/* === Error States === */
 .error-container {
   display: flex;
   flex-direction: column;
@@ -56,26 +57,15 @@
   min-height: 400px;
 }
 
-.error-icon {
-  color: #ef4444;
-  margin-bottom: 1rem;
-}
-
+.error-icon { color: #d66b6b; margin-bottom: 1rem; }
 .error-container h2,
-.error-container h3 {
-  color: #1f2937;
-  margin: 0;
-}
-
-.error-container p {
-  color: #6b7280;
-  max-width: 500px;
-}
+.error-container h3 { color: #1a1a1a; margin: 0; }
+.error-container p { color: #6b6b65; max-width: 500px; }
 
 .retry-button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: #3b82f6;
+  background: #d4a855;
   color: white;
   border: none;
   border-radius: 8px;
@@ -86,22 +76,19 @@
 }
 
 .retry-button:hover {
-  background: #2563eb;
+  background: #c09545;
   transform: translateY(-1px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.retry-button:active {
-  transform: translateY(0);
-}
-
+.retry-button:active { transform: translateY(0); }
 .retry-button:disabled {
-  background: #9ca3af;
+  background: #a8a8a0;
   cursor: not-allowed;
   transform: none;
 }
 
-/* Upload States */
+/* === Upload States === */
 .upload-message {
   padding: 1rem 1.5rem;
   margin: 1rem 0;
@@ -113,26 +100,20 @@
 }
 
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .upload-message.success {
-  background: #d1fae5;
-  color: #065f46;
-  border: 1px solid #10b981;
+  background: #e8f5e8;
+  color: #3d6e3d;
+  border: 1px solid #6eb56e;
 }
 
 .upload-message.error {
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #ef4444;
+  background: #f5e5e5;
+  color: #8a3434;
+  border: 1px solid #d66b6b;
 }
 
 /* Upload Progress */
@@ -150,9 +131,7 @@
   height: 80px;
 }
 
-.progress-circle svg {
-  transform: rotate(-90deg);
-}
+.progress-circle svg { transform: rotate(-90deg); }
 
 .progress-text {
   position: absolute;
@@ -161,7 +140,7 @@
   transform: translate(-50%, -50%);
   font-size: 1.25rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: #d4a855;
 }
 
 .upload-dropzone.uploading {
@@ -169,15 +148,15 @@
   opacity: 0.9;
 }
 
-/* Login Error Message */
+/* === Login Error Message === */
 .error-message {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1rem;
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #ef4444;
+  background: #f5e5e5;
+  color: #8a3434;
+  border: 1px solid #d66b6b;
   border-radius: 8px;
   margin-bottom: 1rem;
   font-size: 0.875rem;
@@ -186,10 +165,10 @@
 
 .error-message svg {
   flex-shrink: 0;
-  color: #ef4444;
+  color: #d66b6b;
 }
 
-/* Status Breakdown for Dashboard */
+/* === Status Breakdown === */
 .status-breakdown {
   display: flex;
   flex-direction: column;
@@ -210,31 +189,23 @@
   flex-shrink: 0;
 }
 
-.status-indicator.normal {
-  background: #10b981;
-}
-
-.status-indicator.warning {
-  background: #f59e0b;
-}
-
-.status-indicator.critical {
-  background: #ef4444;
-}
+.status-indicator.normal { background: #6eb56e; }
+.status-indicator.warning { background: #e89c5c; }
+.status-indicator.critical { background: #d66b6b; }
 
 .status-label {
   flex: 1;
-  color: #6b7280;
+  color: #6b6b65;
   font-size: 0.875rem;
 }
 
 .status-count {
   font-weight: 600;
-  color: #1f2937;
+  color: #1a1a1a;
   font-size: 1rem;
 }
 
-/* Alerts List for Dashboard */
+/* === Alerts List === */
 .alerts-list {
   display: flex;
   flex-direction: column;
@@ -247,14 +218,12 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
-  background: #f9fafb;
+  background: #f5f5f0;
   border-radius: 8px;
   transition: all 0.2s;
 }
 
-.alert-item:hover {
-  background: #f3f4f6;
-}
+.alert-item:hover { background: #eaeae5; }
 
 .alert-icon {
   width: 32px;
@@ -268,82 +237,61 @@
   color: white;
 }
 
-.alert-icon.critical {
-  background: #ef4444;
-}
+.alert-icon.critical { background: #d66b6b; }
+.alert-icon.warning { background: #e89c5c; }
 
-.alert-icon.warning {
-  background: #f59e0b;
-}
-
-.alert-details {
-  flex: 1;
-}
-
+.alert-details { flex: 1; }
 .alert-title {
   font-weight: 500;
-  color: #1f2937;
+  color: #1a1a1a;
   margin-bottom: 0.25rem;
 }
 
 .alert-meta {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: #6b6b65;
 }
 
-/* No Results / Empty States */
+/* === Empty States === */
 .no-results,
 .no-uploads {
   text-align: center;
   padding: 3rem;
-  color: #6b7280;
+  color: #6b6b65;
   font-size: 0.875rem;
 }
 
-/* Dark Mode Overrides */
+/* === Dark Mode === */
 .dark-mode .error-container h2,
 .dark-mode .error-container h3,
 .dark-mode .status-count,
-.dark-mode .alert-title {
-  color: #f9fafb;
-}
+.dark-mode .alert-title { color: #f5f5f0; }
 
 .dark-mode .error-container p,
 .dark-mode .status-label,
-.dark-mode .alert-meta {
-  color: #9ca3af;
-}
+.dark-mode .alert-meta { color: #d4d4cf; }
 
 .dark-mode .spinner-large {
-  border-color: #374151;
-  border-top-color: #3b82f6;
+  border-color: #2a2a2a;
+  border-top-color: #e8b962;
 }
 
 .dark-mode .spinner {
-  border-color: #374151;
-  border-top-color: #3b82f6;
+  border-color: #2a2a2a;
+  border-top-color: #e8b962;
 }
 
-.dark-mode .alert-item {
-  background: #1f2937;
-}
+.dark-mode .alert-item { background: #2a2a2a; }
+.dark-mode .alert-item:hover { background: #353535; }
+.dark-mode .status-item { border-bottom-color: #353535; }
 
-.dark-mode .alert-item:hover {
-  background: #374151;
-}
-
-.dark-mode .status-item {
-  border-bottom-color: #374151;
-}
-
-/* Button disabled state in dark mode */
 .dark-mode .retry-button:disabled,
 .dark-mode .sign-in-btn:disabled {
-  background: #4b5563;
+  background: #353535;
   cursor: not-allowed;
 }
 
-/* Responsive adjustments */
+/* === Responsive === */
 @media (max-width: 768px) {
   .loading-container,
   .error-container {
@@ -362,77 +310,43 @@
     font-size: 0.8125rem;
   }
 
-  .upload-message {
-    padding: 0.75rem 1rem;
-    font-size: 0.8125rem;
-  }
-
-  .alert-item {
-    padding: 0.75rem;
-  }
-
-  .alert-icon {
-    width: 28px;
-    height: 28px;
-    font-size: 0.875rem;
-  }
-
-  .status-breakdown {
-    padding: 1rem;
-  }
+  .upload-message { padding: 0.75rem 1rem; font-size: 0.8125rem; }
+  .alert-item { padding: 0.75rem; }
+  .alert-icon { width: 28px; height: 28px; font-size: 0.875rem; }
+  .status-breakdown { padding: 1rem; }
 }
 
-/* Accessibility improvements */
+/* === Accessibility === */
 .retry-button:focus,
 .browse-btn:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #d4a855;
   outline-offset: 2px;
 }
 
-/* Animation for first load */
+/* === Animations === */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .equipment-grid,
 .charts-container,
-.dashboard-grid {
-  animation: fadeIn 0.3s ease-in;
-}
+.dashboard-grid { animation: fadeIn 0.3s ease-in; }
 
-/* Skeleton loading states (optional enhancement) */
+/* === Skeleton Loading === */
 .skeleton {
-  background: linear-gradient(
-    90deg,
-    #f3f4f6 25%,
-    #e5e7eb 50%,
-    #f3f4f6 75%
-  );
+  background: linear-gradient(90deg, #eaeae5 25%, #d9d9d4 50%, #eaeae5 75%);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
   border-radius: 4px;
 }
 
 @keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 .dark-mode .skeleton {
-  background: linear-gradient(
-    90deg,
-    #1f2937 25%,
-    #374151 50%,
-    #1f2937 75%
-  );
+  background: linear-gradient(90deg, #2a2a2a 25%, #353535 50%, #2a2a2a 75%);
   background-size: 200% 100%;
 }
