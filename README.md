@@ -23,20 +23,12 @@ ChemData is a comprehensive monitoring system designed for chemical equipment da
 Navigate to the `Backend` directory and set up a virtual environment.
 
 ```bash
-cd Backend
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+venv\Scripts\activate
 pip install -r requirements.txt
+cd "Backend"
 
 ```
-
-**Configuration:**
-Create a `.env` file in the `Backend` directory (managed via `python-decouple`) with the following variables:
-
-* `SECRET_KEY`: Your Django secret key.
-* `DEBUG`: True/False.
-* `ALLOWED_HOSTS`: Comma-separated list of hosts.
-* `DB_ENGINE`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, `DB_PORT`: Database credentials.
 
 **Database Initialization:**
 
@@ -49,7 +41,7 @@ python manage.py runserver
 
 ### 2. Web Frontend Setup (React)
 
-Navigate to the `Frontend (Web)` directory.
+In another command prompt window navigate to the `Frontend (Web)` directory.
 
 ```bash
 cd "Frontend (Web)"
@@ -62,11 +54,11 @@ The application will be available at `http://localhost:5173`.
 
 ### 3. Desktop App Setup (PyQt6)
 
-Navigate to the `Frontend (App)` directory.
+In another command prompt window navigate to the `Frontend (App)` directory.
 
 ```bash
+venv\Scripts\activate
 cd "Frontend (App)"
-pip install -r requirements.txt
 python main.py
 
 ```
