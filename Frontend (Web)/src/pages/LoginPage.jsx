@@ -13,7 +13,7 @@ const LoginPage = ({ onLogin }) => {
 
   const handleSubmit = async () => {
     if (!email || !password) {
-      setError('Please enter both email and password');
+      setError('Please enter both username and password');
       return;
     }
 
@@ -82,7 +82,7 @@ const LoginPage = ({ onLogin }) => {
 
         <div className="login-form">
           <div className="form-group">
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email">Username</label>
             <div className="input-wrapper">
               <span className="input-icon">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -92,7 +92,7 @@ const LoginPage = ({ onLogin }) => {
               <input
                 type="email"
                 id="email"
-                placeholder="name@company.com"
+                placeholder="username"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyPress={handleKeyPress}
