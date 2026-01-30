@@ -1,0 +1,14 @@
+venv/
+
+Backend/db.sqlite3
+Backend/api/__pycache__/
+Backend/chemdata_backend\__pycache__/
+Backend/equipment/__pycache__/
+
+Backend/db.sqlite3
+
+Frontend (App)/__pycache__
+
+Frontend (Web)/node_modules/
+
+

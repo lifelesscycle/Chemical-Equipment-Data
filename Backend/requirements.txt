@@ -1,0 +1,34 @@
+# Django and REST Framework
+Django
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt
+
+# Database
+psycopg2-binary
+mysqlclient
+
+# Data Processing
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+pillow
+
+# File Processing
+openpyxl
+xlrd
+
+# Utilities
+python-decouple
+python-dateutil
+
+# Testing
+pytest
+pytest-django
+
+# Production
+gunicorn
+whitenoise
